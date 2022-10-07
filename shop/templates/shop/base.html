@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{% block title %}{% endblock %}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'bootstrap/js/bootstrap.min.css' %}">
+   
+</head>
+<body>
+<div class="main">
+  <div class="mayne"> <img src="{% static 'css/images/spacer.gif' %}" width="800" height="10" alt="" />
+    <div class="topp">
+      <div class="bclowd"></div>
+      <div class="tpstar">
+        <div class="banner">
+          <div align="center"><img src="{% static 'css/images/logo.png' %}" width="439" height="100" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="bodd">
+      <div class="sbi">
+        <div class="sbititle">Навигация</div>
+        <div id="sbinav">
+          <ul>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'articles' %}">Статьи</a></li>
+            <li><a href="{% url 'create' %}">Создать статью</a></li>
+            <li><a href="#">О нас</a></li>
+          </ul>
+        </div>
+        <div class="sbititle">Lorem Ipsum  </div>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque nisl. Cras convallis, odio nec tempus tincidunt, augue purus sagittis urna, a auctor tellus pede ac magna. Aenean euismod euismod magna. Proin tempus massa nec est. Cras auctor, justo ac feugiat commodo, mi tellus viverra ligula, at vestibulum elit massa sit amet arcu. Vestibulum consequat arcu quis dui. Curabitur congue ligula a enim. Nunc quis pede. Mauris porttitor laoreet ante. Nunc placerat. Fusce aliquam eros sit amet mi. Aenean mollis lacus at ipsum. Phasellus sed ipsum. In tincidunt metus vel dolor. </p>
+      </div>
+      <div class="mbod">
+      <div align="center" class="cldbrd"><img src="{% static 'css/images/cloudsbdr.gif' %}" width="529" height="32" alt="" /></div>
+        <div class="bodztitl">Candii clouds</div>
+        <div class="bodz">
+          {% block body %}{% endblock %}
+        </div>
+      </div>
+      <img src="{% static 'css/images/spacer.gif' %}" width="800" height="15" alt="" /> </div>
+    <div class="footer">Copyright &copy; 2022. All Rights Reserved. </div>
+  </div>
+</div>
+</body>
+</html>

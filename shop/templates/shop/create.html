@@ -1,0 +1,19 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block body %}
+<h1><big>Создать статью</big></h1>
+<form method="post" enctype="multipart/form-data" >
+    {% csrf_token %}
+    {{ form.title }}<br>
+    <p></p>
+    {{ form.content }}<br>
+    <p></p>
+    {{ form.photo }}<br>
+    <button type="submit" class="btn btn-red">добавить</button>
+    <span>{{ error }}</span>
+</form>
+{% endblock %}
